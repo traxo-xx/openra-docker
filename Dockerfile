@@ -1,31 +1,35 @@
 # Define the builder image
-FROM mono AS builder
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:6.0 AS builder
 
 ARG OPENRA_RELEASE_VERSION
 ENV OPENRA_RELEASE_VERSION=${OPENRA_RELEASE_VERSION}
-ARG OPENRA_RELEASE_TYPE=release
+ARG OPENRA_RELEASE_TYPE=${OPENRA_RELEASE_TYPE:-"release"}
 ARG OPENRA_RELEASE=https://github.com/OpenRA/OpenRA/releases/download/${OPENRA_RELEASE_TYPE}-${OPENRA_RELEASE_VERSION}/OpenRA-${OPENRA_RELEASE_TYPE}-${OPENRA_RELEASE_VERSION}-source.tar.bz2
 
 RUN apt-get update && \
     apt-get -y upgrade && \
     apt-get install -y --no-install-recommends \
             ca-certificates \
+            lsb-release \
             curl \
-            liblua5.1 \
-            libsdl2-2.0-0 \
-            libopenal1 \
+            unzip \
             make \
             patch \
-            unzip \
+            libfreetype6 \
+            libopenal1 \
+            liblua5.1-0 \
+            libsdl2-2.0-0 \
+            git \
+            build-essential \
             wget
 RUN useradd -d /home/openra -m -s /sbin/nologin openra && \
     mkdir -p /home/openra/source /home/openra/lib/openra && \
     curl -L $OPENRA_RELEASE | tar xj -C /home/openra/source && \
-    cd /home/openra/source && make all RUNTIME=mono && \
+    cd /home/openra/source && make all RUNTIME=net6 TARGETPLATFORM=unix-generic && \
     mv /home/openra/source/* /home/openra/lib/openra
 
 # Define the final image
-FROM mono
+FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:6.0
 
 COPY --from=builder /home/openra/lib/openra /home/openra/lib/openra
 RUN useradd -d /home/openra -m -s /sbin/nologin openra && \

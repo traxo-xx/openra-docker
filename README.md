@@ -1,5 +1,5 @@
-[![Check for new OpenRA release and build docker image](https://github.com/traxo-xx/openra-docker/actions/workflows/main.yml/badge.svg)](https://github.com/traxo-xx/openra-docker/actions/workflows/main.yml) [![1] ![2]](https://github.com/traxo-xx/openra-docker/pkgs/container/openra)
-[![Check for new OpenRA playtest and build docker image](https://github.com/traxo-xx/openra-docker/actions/workflows/playtest.yml/badge.svg)](https://github.com/traxo-xx/openra-docker/actions/workflows/playtest.yml) [![3] ![4]](https://github.com/traxo-xx/openra-docker/pkgs/container/openra)
+[![Check for new OpenRA release and build docker image](https://github.com/traxo-xx/openra-docker/actions/workflows/main.yml/badge.svg)](https://github.com/traxo-xx/openra-docker/actions/workflows/main.yml) [![1] ![2] ![3]](https://github.com/traxo-xx/openra-docker/pkgs/container/openra)
+[![Check for new OpenRA playtest and build docker image](https://github.com/traxo-xx/openra-docker/actions/workflows/playtest.yml/badge.svg)](https://github.com/traxo-xx/openra-docker/actions/workflows/playtest.yml) [![4] ![4] ![5]](https://github.com/traxo-xx/openra-docker/pkgs/container/openra)
 
 # 🎮 OpenRA Dedicated Server Docker Image
 
@@ -76,7 +76,9 @@ Feel free to fork this project, submit PRs or issues, or ask any question about 
 
 
 
-[1]: <https://ghcr-badge.egpl.dev/traxo-xx/openra-docker/latest_tag?color=%2344cc11&ignore=20200202&label=version&trim=>
-[2]: <https://ghcr-badge.egpl.dev/traxo-xx/openra-docker/size>
-[3]: <https://ghcr-badge.egpl.dev/traxo-xx/openra-docker/latest_tag?color=%233380a6&ignore=playtest*&label=version&trim=>
-[4]: <https://ghcr-badge.egpl.dev/traxo-xx/openra-docker/size?color=%233380a6&tag=playtest&label=image+size&trim=>
+[1]: <https://img.shields.io/badge/tag-release-green>
+[2]: <https://img.shields.io/badge/version-20250330-green>
+[3]: <https://ghcr-badge.egpl.dev/traxo-xx/openra-docker/size>
+[4]: <https://img.shields.io/badge/tag-playtest-rgb(51%2C128%2C166)>
+[5]: <https://img.shields.io/badge/version-20260222-rgb(51%2C128%2C166)>
+[6]: <https://ghcr-badge.egpl.dev/traxo-xx/openra-docker/size?color=%233380a6&tag=playtest&label=image+size&trim=>

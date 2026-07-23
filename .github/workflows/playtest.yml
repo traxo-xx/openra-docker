@@ -61,6 +61,7 @@ jobs:
         push: true
         tags: |
           ghcr.io/${{ github.repository }}:${{ env.OPENRA_RELEASE_VERSION }}
+          ghcr.io/${{ github.repository }}:playtest-${{ env.OPENRA_RELEASE_VERSION }}
           ghcr.io/${{ github.repository }}:playtest
         build-args: |
           OPENRA_RELEASE_VERSION=${{ env.OPENRA_RELEASE_VERSION }}

@@ -59,6 +59,7 @@ jobs:
         push: true
         tags: |
           ghcr.io/${{ github.repository }}:${{ env.OPENRA_RELEASE_VERSION }}
+          ghcr.io/${{ github.repository }}:release-${{ env.OPENRA_RELEASE_VERSION }}
           ghcr.io/${{ github.repository }}:latest
         build-args: OPENRA_RELEASE_VERSION=${{ env.OPENRA_RELEASE_VERSION }} # pass the release version as build-arg to docker build
         platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/386 # the platforms, linux/ppc64le runs out of memory :( linux/arm/v5 lua lib problem

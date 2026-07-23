@@ -58,7 +58,6 @@ jobs:
       uses: docker/build-push-action@v7
       with:
         context: .
-        file: "{context}/Dockerfile"
         push: true
         tags: |
           ghcr.io/${{ github.repository }}:${{ env.OPENRA_RELEASE_VERSION }}

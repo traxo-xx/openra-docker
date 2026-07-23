@@ -73,6 +73,6 @@ jobs:
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         echo $OPENRA_RELEASE_VERSION > playtest-version.txt
-        git add version.txt
+        git add playtest-version.txt
         git commit -m "New OpenRA playtest $OPENRA_RELEASE_VERSION detected, starting docker image build"
         git push

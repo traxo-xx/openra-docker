@@ -1,4 +1,5 @@
-[![Check for new OpenRA release and build docker image](https://github.com/dkruyt/openra/actions/workflows/main.yml/badge.svg)](https://github.com/dkruyt/openra/actions/workflows/main.yml) [![1] ![2]](https://github.com/dkruyt/openra/pkgs/container/openra)
+[![Check for new OpenRA release and build docker image](https://github.com/traxo-xx/openra-docker/actions/workflows/main.yml/badge.svg)](https://github.com/traxo-xx/openra-docker/actions/workflows/main.yml) [![1] ![2]](https://github.com/traxo-xx/openra-docker/pkgs/container/openra)
+[![Check for new OpenRA playtest and build docker image](https://github.com/traxo-xx/openra-docker/actions/workflows/playtest.yml/badge.svg)](https://github.com/traxo-xx/openra-docker/actions/workflows/playtest.yml) [![3] ![4]](https://github.com/traxo-xx/openra-docker/pkgs/container/openra)
 
 # 🎮 OpenRA Dedicated Server Docker Image
 
@@ -30,7 +31,7 @@ To start the OpenRA server, you can use Docker or Docker Compose.
 __Docker:__
 
 ```sh
-docker run -d -p 1234:1234 -v openra_data:/home/openra/.openra ghcr.io/dkruyt/openra:latest
+docker run -d -p 1234:1234 -v openra_data:/home/openra/.openra ghcr.io/traxo-xx/openra-docker:latest
 ```
 
 Replace `latest` with the version you want to use if not latest.
@@ -75,5 +76,7 @@ Feel free to fork this project, submit PRs or issues, or ask any question about 
 
 
 
-[1]: <https://ghcr-badge.egpl.dev/dkruyt/openra/latest_tag?color=%2344cc11&ignore=20200202&label=version&trim=>
-[2]: <https://ghcr-badge.egpl.dev/dkruyt/openra/size>
+[1]: <https://ghcr-badge.egpl.dev/traxo-xx/openra-docker/latest_tag?color=%2344cc11&ignore=20200202&label=version&trim=>
+[2]: <https://ghcr-badge.egpl.dev/traxo-xx/openra-docker/size>
+[3]: <https://ghcr-badge.egpl.dev/traxo-xx/openra-docker/latest_tag?color=%233380a6&ignore=playtest*&label=version&trim=>
+[4]: <https://ghcr-badge.egpl.dev/traxo-xx/openra-docker/size?color=%233380a6&tag=playtest&label=image+size&trim=>

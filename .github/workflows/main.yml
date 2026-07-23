@@ -66,9 +66,10 @@ jobs:
     - name: Update and commit new version
       if: env.NEW_RELEASE == 'true'
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
         echo $OPENRA_RELEASE_VERSION > version.txt
-        git add version.txt
-        git commit -m "New OpenRA release $OPENRA_RELEASE_VERSION detected, starting docker image build"
-        git push
+    
+    - name: Commit and push changes
+      uses: devops-infra/action-commit-push@v1.5.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        commit_message: "New OpenRA release $OPENRA_RELEASE_VERSION detected, starting docker image build"

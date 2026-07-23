@@ -1,4 +1,5 @@
 [![Check for new OpenRA release and build docker image](https://github.com/traxo-xx/openra-docker/actions/workflows/main.yml/badge.svg)](https://github.com/traxo-xx/openra-docker/actions/workflows/main.yml) [![1] ![2] ![3]](https://github.com/traxo-xx/openra-docker/pkgs/container/openra)
+
 [![Check for new OpenRA playtest and build docker image](https://github.com/traxo-xx/openra-docker/actions/workflows/playtest.yml/badge.svg)](https://github.com/traxo-xx/openra-docker/actions/workflows/playtest.yml) [![4] ![4] ![5]](https://github.com/traxo-xx/openra-docker/pkgs/container/openra)
 
 # 🎮 OpenRA Dedicated Server Docker Image

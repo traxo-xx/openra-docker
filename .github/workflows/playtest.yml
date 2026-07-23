@@ -57,7 +57,7 @@ jobs:
       if: env.NEW_RELEASE == 'true'
       uses: docker/build-push-action@v7
       with:
-        context: .
+        context: Dockerfile
         push: true
         tags: |
           ghcr.io/${{ github.repository }}:${{ env.OPENRA_RELEASE_VERSION }}
